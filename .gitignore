@@ -1,0 +1,9 @@
+
+# --- Base (agregado para GitHub) ---
+.DS_Store
+**/.DS_Store
+.env
+.vscode/
+.idea/
+error_log
+*.log
