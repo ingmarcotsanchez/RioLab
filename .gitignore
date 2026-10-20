@@ -7,3 +7,10 @@
 .idea/
 error_log
 *.log
+
+# --- RioLab 4.0 (PHP/MySQL) ---
+# Credenciales locales: nunca subirlas al repositorio
+config/config.local.php
+# Documentos cargados por los participantes
+storage/uploads/*
+!storage/uploads/.gitkeep

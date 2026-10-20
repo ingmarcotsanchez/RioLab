@@ -413,6 +413,32 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
 .form-success strong { font-family: var(--font-head); font-size: 1.1rem; }
 .form-success p { color: var(--ink-600); font-size: .95rem; }
 
+/* Botón de contorno (formularios, fichas) */
+.btn-line { color: var(--ink-900); border-color: var(--mist-200); background: transparent; font-size: .95rem; }
+.btn-line:hover { border-color: var(--teal-700); color: var(--teal-700); }
+.btn-line:hover svg { transform: none; }
+
+/* Inscripción conectada al servidor */
+.hp { position: absolute !important; left: -9999px; width: 1px; height: 1px; overflow: hidden; }
+.form-reto { display: grid; gap: .2rem; margin-bottom: 20px; padding: 14px 16px; border-radius: var(--radius-sm); background: #e6f6f3; border: 1px solid #b9e4dc; }
+.form-reto span { font-size: .85rem; color: var(--teal-700); font-weight: 600; }
+.form-reto strong { font-family: var(--font-head); font-size: 1.05rem; }
+.form-alert { margin-bottom: 16px; padding: 12px 14px; border-radius: var(--radius-sm); background: #fef2f2; border: 1px solid var(--danger-soft); color: #991b1b; font-size: .95rem; }
+.form-alert[hidden] { display: none; }
+.form-success { margin-top: 0; }
+.fs-code { margin-top: 1rem; display: grid; gap: .5rem; justify-items: start; }
+.fs-code[hidden] { display: none; }
+.fs-code > span { font-size: .85rem; font-weight: 600; color: var(--teal-700); text-transform: uppercase; letter-spacing: .08em; }
+.fs-code code { font: 700 clamp(1.4rem, 4vw, 1.9rem)/1 var(--font-head); letter-spacing: .06em; padding: .6rem 1rem; border-radius: 12px; background: var(--white); border: 2px dashed var(--teal-700); color: var(--river-900); }
+.fs-code small { color: var(--ink-600); font-size: .88rem; line-height: 1.5; }
+.fs-code a { color: var(--teal-700); font-weight: 600; }
+.form [hidden] { display: none !important; }
+
+.reto-cupos { display: inline-flex; align-items: center; gap: .5rem; margin-top: 18px; font-size: .88rem; font-weight: 500; color: var(--aqua-300); flex: 0 !important; }
+.reto-cupos.is-closed { color: #fdba74; }
+.reto p.reto-cupos { flex: 0; }
+.retos-empty { color: rgba(255,255,255,.7); }
+
 /* ---------- Footer ---------- */
 .footer { position: relative; background: var(--river-950); color: rgba(255,255,255,.75); padding-top: 72px; }
 .footer-wave { position: absolute; top: -1px; left: 0; width: 100%; height: 60px; fill: var(--mist-50); transform: rotate(180deg); }
