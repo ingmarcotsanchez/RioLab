@@ -226,9 +226,7 @@ body:has(.nav-wrap.is-hidden) .subnav { top: 0; }
 .ficha-list dd { margin: 0; font-weight: 600; font-size: .95rem; }
 .ficha-list small { display: block; margin-top: .2rem; font-weight: 400; font-size: .83rem; color: var(--ink-600); line-height: 1.45; }
 .ficha .btn-sun { margin-top: 20px; }
-.btn-line { margin-top: 10px; color: var(--ink-900); border-color: var(--mist-200); background: transparent; font-size: .95rem; }
-.btn-line:hover { border-color: var(--teal-700); color: var(--teal-700); }
-.btn-line:hover svg { transform: none; }
+.ficha .btn-line { margin-top: 10px; }
 .share-msg { min-height: 1.4em; margin-top: .5rem; font-size: .85rem; text-align: center; color: var(--teal-700); }
 
 /* ---------- Otros retos ---------- */
@@ -273,3 +271,20 @@ body:has(.nav-wrap.is-hidden) .subnav { top: 0; }
   .rh-waves { animation: none; }
   .js .reveal .rubric-bar i { transform: none; }
 }
+
+/* ---------- Inscripción, PDF y cupos ---------- */
+.block-lead { margin: 1rem 0 1.6rem; font-size: 1.08rem; color: var(--ink-600); }
+.block-lead strong { color: var(--ink-900); }
+.upload-note { display: flex; gap: .8rem; align-items: flex-start; margin-top: 16px; padding: 16px 18px; border-radius: var(--radius); background: var(--white); border: 1px dashed var(--aqua-500); color: var(--ink-600); }
+.upload-note svg { flex: none; width: 22px; height: 22px; fill: none; stroke: var(--teal-700); stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
+.upload-note a { color: var(--teal-700); font-weight: 600; }
+.closed-box { margin-top: 1.4rem; padding: 24px; border-radius: var(--radius-lg); background: var(--white); border: 1px solid var(--mist-200); display: grid; gap: 1rem; justify-items: start; color: var(--ink-600); }
+#inscripcion .form { box-shadow: none; }
+.ficha-status.is-closed { color: #9a3412; }
+.ficha-cupos { padding: 16px 0 6px; }
+.ficha-cupos-row { display: flex; justify-content: space-between; font-size: .9rem; color: var(--ink-600); margin-bottom: .5rem; }
+.ficha-cupos-row strong { color: var(--ink-900); font-family: var(--font-head); }
+.ficha-bar { display: block; height: 8px; border-radius: 8px; background: var(--mist-100); overflow: hidden; }
+.ficha-bar i { display: block; height: 100%; border-radius: inherit; background: linear-gradient(90deg, var(--teal-700), var(--aqua-400)); }
+.rh-actions .btn-ghost svg { width: 20px; height: 20px; }
+.rh-actions .btn-ghost:hover svg { transform: none; }

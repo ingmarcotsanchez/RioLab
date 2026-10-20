@@ -1,0 +1,123 @@
+/* ==========================================================
+   RioLab 4.0 — Portal de participantes ("Mis entregas")
+   ========================================================== */
+.page-portal { background: var(--mist-50); }
+.sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0; }
+
+.portal-hero {
+  position: relative; color: var(--white);
+  padding: 150px 0 56px;
+  background:
+    radial-gradient(60% 80% at 90% 0%, rgba(20,184,166,.22), transparent 70%),
+    radial-gradient(40% 60% at 0% 100%, rgba(255,199,44,.08), transparent 70%),
+    var(--river-900);
+}
+.portal-hero .container { position: relative; }
+.kicker--light { color: var(--aqua-400); }
+.portal-title { font-size: clamp(2rem, 5vw, 3.4rem); font-weight: 700; letter-spacing: -.03em; }
+.portal-lead { margin-top: .8rem; max-width: 60ch; color: rgba(255,255,255,.78); font-size: 1.08rem; }
+.portal-logout { margin-top: 1.4rem; }
+
+.portal-body { padding-block: 40px 96px; display: grid; grid-template-columns: minmax(0, 1fr); gap: 20px; }
+.portal-body > * { min-width: 0; }
+.portal-narrow { max-width: 720px; padding-block: 150px 80px; }
+
+.pcard { background: var(--white); border: 1px solid var(--mist-200); border-radius: var(--radius-lg); padding: clamp(20px, 3.5vw, 32px); }
+.pcard-title { font-size: 1.45rem; margin-bottom: .6rem; }
+.pcard-title a { text-decoration: none; }
+.pcard-title a:hover { color: var(--teal-700); }
+.pcard.empty a { color: var(--teal-700); font-weight: 600; }
+.code-big { font: 700 2rem/1 var(--font-head); letter-spacing: .06em; margin: 1rem 0; }
+
+/* Avisos */
+.notice { padding: 14px 16px; border-radius: var(--radius-sm); border: 1px solid; font-weight: 500; }
+.notice--ok { background: #ecfdf5; border-color: #a7f3d0; color: #065f46; }
+.notice--error { background: #fef2f2; border-color: var(--danger-soft); color: #991b1b; }
+.notice--warn { background: #fffbeb; border-color: #fcd34d; color: #92400e; margin-bottom: 1rem; }
+
+/* Acceso */
+.portal-login { display: grid; gap: 20px; align-items: start; }
+@media (min-width: 860px) { .portal-login { grid-template-columns: 1.1fr .9fr; } }
+.portal-login .pcard { display: grid; gap: 18px; box-shadow: var(--shadow-lg); }
+.portal-login .field input { width: 100%; min-height: 52px; padding: .75rem 1rem; font: 400 1rem/1.4 var(--font-body); background: var(--mist-50); border: 1.5px solid var(--mist-200); border-radius: var(--radius-sm); }
+.portal-login .field input:focus { outline: none; border-color: var(--teal-700); background: var(--white); box-shadow: 0 0 0 4px rgba(15,118,110,.15); }
+.code-input { font-family: var(--font-head) !important; letter-spacing: .12em; text-transform: uppercase; font-size: 1.15rem !important; }
+.hint { margin-top: .4rem; font-size: .88rem; color: var(--ink-600); }
+.portal-help { padding: 8px 4px; display: grid; gap: .7rem; justify-items: start; }
+.portal-help h2 { font-size: 1.15rem; margin-top: .6rem; }
+.portal-help p { color: var(--ink-600); }
+
+/* Inscripción */
+.ins-head { display: flex; align-items: center; gap: 14px; flex-wrap: wrap; margin-bottom: 18px; }
+.ins-icon { flex: none; width: 52px; height: 52px; border-radius: 14px; display: grid; place-items: center; background: var(--river-900); color: var(--sun-400); }
+.ins-icon svg { width: 26px; height: 26px; fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
+.ins-titles { flex: 1; min-width: 200px; }
+.ins-titles .pcard-title { margin: .2rem 0 0; }
+.ins-code { font: 600 .78rem/1 var(--font-head); letter-spacing: .08em; text-transform: uppercase; color: var(--teal-700); }
+.ins-progress { margin-bottom: 20px; }
+.ins-progress-row { display: flex; justify-content: space-between; font-size: .9rem; color: var(--ink-600); margin-bottom: .45rem; }
+.ins-progress-row strong { color: var(--ink-900); }
+.ficha-bar { display: block; height: 8px; border-radius: 8px; background: var(--mist-100); overflow: hidden; }
+.ficha-bar i { display: block; height: 100%; border-radius: inherit; background: linear-gradient(90deg, var(--teal-700), var(--aqua-400)); }
+
+/* Insignias */
+.badge { display: inline-flex; align-items: center; gap: .35rem; padding: .35rem .7rem; border-radius: 999px; font-size: .8rem; font-weight: 600; white-space: nowrap; border: 1px solid; }
+.badge--neutral { background: var(--mist-100); color: var(--ink-600); border-color: var(--mist-200); }
+.badge--info { background: #eff6ff; color: #1d4ed8; border-color: #bfdbfe; }
+.badge--ok { background: #ecfdf5; color: #047857; border-color: #a7f3d0; }
+.badge--warn { background: #fffbeb; color: #b45309; border-color: #fde68a; }
+.badge--danger { background: #fef2f2; color: #b91c1c; border-color: #fecaca; }
+
+/* Entregables */
+.slots { display: grid; gap: 12px; }
+.slot { padding: 18px; border-radius: var(--radius); background: var(--mist-50); border: 1px solid var(--mist-200); }
+.slot-head { display: flex; gap: 12px; align-items: flex-start; }
+.slot-n { flex: none; width: 38px; height: 38px; border-radius: 10px; display: grid; place-items: center; background: rgba(255,199,44,.22); color: #7a5800; font: 700 .95rem/1 var(--font-head); }
+.slot h3 { font-size: 1.08rem; }
+.slot-head p { color: var(--ink-600); font-size: .93rem; margin-top: .15rem; }
+
+.files { display: grid; gap: 8px; margin-top: 14px; }
+.file { display: flex; align-items: flex-start; gap: 12px; padding: 12px 14px; background: var(--white); border: 1px solid var(--mist-200); border-radius: var(--radius-sm); }
+.file-main { flex: 1; min-width: 0; }
+.file-name { font-weight: 600; color: var(--ink-900); word-break: break-word; }
+.file-name:hover { color: var(--teal-700); }
+.file-meta { display: block; font-size: .83rem; color: var(--ink-600); margin-top: .15rem; }
+.file-note { font-size: .88rem; color: var(--ink-600); margin-top: .35rem; }
+.file-feedback { margin-top: .5rem; padding: 10px 12px; border-radius: 8px; background: #e6f6f3; border-left: 3px solid var(--teal-700); font-size: .9rem; }
+.icon-btn { width: 40px; height: 40px; display: grid; place-items: center; border-radius: 10px; border: 1px solid transparent; background: none; color: var(--ink-600); cursor: pointer; transition: background-color .2s, color .2s; }
+.icon-btn:hover { background: #fef2f2; color: var(--danger); }
+.icon-btn svg { width: 20px; height: 20px; fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
+
+.upload { margin-top: 14px; display: grid; gap: 10px; }
+.drop {
+  position: relative; display: grid; justify-items: center; gap: .3rem; padding: 18px; text-align: center;
+  border: 2px dashed var(--mist-200); border-radius: var(--radius-sm); background: var(--white); cursor: pointer;
+  transition: border-color .2s, background-color .2s;
+}
+.drop:hover, .drop.is-over { border-color: var(--aqua-500); background: #f0fdfa; }
+.drop:focus-within { border-color: var(--teal-700); box-shadow: 0 0 0 4px rgba(15,118,110,.15); }
+.drop input { position: absolute; inset: 0; opacity: 0; cursor: pointer; }
+.drop svg { width: 26px; height: 26px; fill: none; stroke: var(--teal-700); stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
+.drop-text { font-size: .95rem; }
+.drop-text strong { color: var(--teal-700); }
+.drop-hint { font-size: .8rem; color: var(--ink-600); }
+.drop.has-file { border-style: solid; border-color: var(--teal-700); background: #f0fdfa; }
+.upload-row { display: flex; gap: 10px; flex-wrap: wrap; }
+.upload-row input { flex: 1 1 220px; min-height: 48px; padding: .6rem .9rem; font: 400 .95rem/1.4 var(--font-body); border: 1.5px solid var(--mist-200); border-radius: var(--radius-sm); background: var(--white); }
+.upload-row input:focus { outline: none; border-color: var(--teal-700); box-shadow: 0 0 0 4px rgba(15,118,110,.15); }
+.upload-row .btn { flex: 0 0 auto; }
+.upload .btn.is-loading .btn-label { opacity: .7; }
+
+/* Evitar desbordes en pantallas angostas */
+.slots, .files, .upload { grid-template-columns: minmax(0, 1fr); }
+.slot, .file-main, .upload-row input { min-width: 0; }
+@media (max-width: 520px) {
+  .pcard { padding: 16px; }
+  .slot { padding: 12px; }
+  .upload-row .btn { flex: 1 1 100%; }
+  .ins-head .badge { white-space: normal; }
+  .file { flex-wrap: wrap; }
+  .file-main { flex: 1 1 100%; order: 2; }
+  .file .badge { order: 1; }
+  .file .file-del { order: 1; margin-left: auto; }
+}
